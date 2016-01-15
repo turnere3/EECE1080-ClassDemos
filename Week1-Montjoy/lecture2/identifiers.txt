@@ -1,0 +1,15 @@
+
+Which of the following are legal identifiers or variable names?
+
+_xyx
+
+xyz
+
+0xyz
+
+#I_am_a_legal_identifier
+
+camelCase
+
+not_camel_case
+

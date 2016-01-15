@@ -1,0 +1,15 @@
+What commands are used from the Linux terminal to perform the following actions?
+
+List the contains of a directory.
+
+Create a new folder or directory.
+
+Rename a file or directory.
+
+Edit a c++ file
+
+Compile a c++ file
+
+What is the command to compile a C++ program into an executable?
+
+How do you run a c++ executable from the terminal?
