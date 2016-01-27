@@ -7,7 +7,7 @@
 using namespace std;
 
 int main(){
-  int stripes;
+  int number_of_stripes;
   int height_of_stripe;
   int width_of_stripe;
   int w;
@@ -15,16 +15,16 @@ int main(){
 
   cout << "Welcome to the Stripes Generator" << endl;
   cout << "How many stripes do you want to generate? ";
-  cin >> stripes;
+  cin >> number_of_stripes;
   cout << "What is the width of each stripe? ";
   cin >> width_of_stripe;
   cout << "What is the height of each stripe? ";
   cin >> height_of_stripe;
 
-  for( int s = 1; s <= stripes ; s++){
+  for( int stripes = 1; stripes <= number_of_stripes; stripes++){
     for( h = 1; h <= height_of_stripe; h++){
       for ( w = 1; w <= width_of_stripe; w++){
-        if((s % 2) == 0){
+        if((stripes % 2) == 0){
           cout << "*";
         }else{
           cout << "=";
