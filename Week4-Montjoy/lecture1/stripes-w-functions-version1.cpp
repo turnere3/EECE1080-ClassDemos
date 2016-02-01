@@ -13,11 +13,13 @@ int isEven(int even_or_not){
 
 
 int main(){
+
+  int w;
+  int h;
   int number_of_stripes;
   int height_of_stripe;
   int width_of_stripe;
-  int w;
-  int h;
+
   char even_brush_code = 'A';
   char odd_brush_code = 'C';
 
@@ -34,11 +36,13 @@ int main(){
   for( int s = 1; s <= number_of_stripes ; s++){
     for( h = 1; h <= height_of_stripe; h++){
       for ( w = 1; w <= width_of_stripe; w++){
+
         if((s % 2) == 0){
           cout << even_brush_code;
         }else{
           cout << odd_brush_code;
         }
+
       }
       cout << endl;
     }
