@@ -29,6 +29,9 @@ int main(){
   double a, b, c;
   double discriminant;
 
+  //cout << printInfoMessage << endl;//address
+  //cout << printInfoMessage() << endl; // wont compile
+
   printInfoMessage();
 
   cout << "What is the value of a? ";
@@ -77,10 +80,13 @@ int main(){
 }
 
 double calcDiscriminant(double a, double b, double c){
-  return((b * b) - (4 * a * c));
+  double disc;
+  disc = (b * b) - (4 * a * c);
+  return(disc);
 }
 
-double calcRealRoot1(double a, double b, double c, double discriminant){
+double calcRealRoot1(double a, double b, double c, 
+  double discriminant){
     return((-b + sqrt(discriminant))/(2 * a));
 }
 
