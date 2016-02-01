@@ -29,6 +29,8 @@ int main(){
   double a, b, c;
   double discriminant;
 
+  printInfoMessage();
+
   cout << "What is the value of a? ";
   cin >> a;
   cout << "What is the value of b? ";

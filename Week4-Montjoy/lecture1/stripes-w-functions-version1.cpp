@@ -9,13 +9,27 @@
 using namespace std;
 
 int isEven(int even_or_not){
+
+  if((even_or_not % 2) == 0){
+    return 1;
+  }
+    
+  return 0;
 }
 
+int isOdd(int odd_or_not){
 
+  if((odd_or_not % 2) != 0){
+    return 1;
+  }
+    
+  return 0;
+}
+
+void displayStripes(int number_of_stripes, int height_of_stripe,
+  int width_of_stripe, char even_brush_code, char odd_brush_code);
+  
 int main(){
-
-  int w;
-  int h;
   int number_of_stripes;
   int height_of_stripe;
   int width_of_stripe;
@@ -23,8 +37,6 @@ int main(){
   char even_brush_code = 'A';
   char odd_brush_code = 'C';
 
-  srand(time(0));
-  
   cout << "Welcome to the Stripes Generator" << endl;
   cout << "How many stripes do you want to generate? ";
   cin >> number_of_stripes;
@@ -33,11 +45,22 @@ int main(){
   cout << "What is the height of each stripe? ";
   cin >> height_of_stripe;
 
-  for( int s = 1; s <= number_of_stripes ; s++){
+  displayStripes(number_of_stripes, height_of_stripe,
+    width_of_stripe,  even_brush_code, odd_brush_code);
+
+  return 0;
+}
+
+void displayStripes(int number_of_stripes, int height_of_stripe,
+  int width_of_stripe, char even_brush_code, char odd_brush_code){
+  
+  int w, h;
+  
+  for( int stripe = 1; stripe <= number_of_stripes ; stripe++){
     for( h = 1; h <= height_of_stripe; h++){
       for ( w = 1; w <= width_of_stripe; w++){
 
-        if((s % 2) == 0){
+        if(isEven(stripe)){
           cout << even_brush_code;
         }else{
           cout << odd_brush_code;
@@ -47,7 +70,4 @@ int main(){
       cout << endl;
     }
   }
-
-  return 0;
 }
-
