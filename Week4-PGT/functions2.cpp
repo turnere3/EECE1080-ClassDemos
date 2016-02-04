@@ -1,3 +1,5 @@
+// Demo of pass by reference.
+// Paul Talaga - CS1 - Spring 2016
 #include <iostream>
 
 using namespace std;

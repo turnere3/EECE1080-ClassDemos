@@ -1,3 +1,5 @@
+// Demo of functions w/ overloading and pass-by-reference.
+// Paul Talaga - CS1 - Spring 2016
 #include <iostream>
 
 using namespace std;
@@ -29,12 +31,12 @@ int rangeSum(int to){
 }  
 
 
-
 int main(){
 	cout << "The sum from 1 to 1 is: " << rangeSum(1,1) << " should be: 1" << endl;
 	cout << "The sum from -1 to 1 is: " << rangeSum(-1,1) << " should be: 0" << endl;
 	cout << "The sum from 5 to 1 is: " << rangeSum(5,1) << " should be: 0" << endl;
 	cout << "The sum from 0 to 100 is: " << rangeSum(100) << " should be: 0" << endl;
+
 	int loop_t;
 	cout << "The sum from 0 to 100 is: " << rangeSum(0, 100, loop_t) << " should be: 0" << endl;
 	cout << "I looped " << loop_t << " times.\n";
