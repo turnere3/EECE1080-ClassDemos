@@ -90,6 +90,7 @@ void getBrushCode(char &even_brush_code, char &odd_brush_code){
     //while(odd_brush_code == even_brush_code){
       //odd_brush_code = 'a' + rand()%26;
     //}
+
     for(odd_brush_code = 'a' + rand()%26; odd_brush_code == even_brush_code; odd_brush_code = 'a' + rand()%26 ) 
 		;
 
