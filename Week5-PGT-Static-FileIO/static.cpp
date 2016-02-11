@@ -1,3 +1,7 @@
+// Author: Paul Talaga  Feb 2016
+//
+// A demo of the static keyword for variables in functions.
+
 #include <iostream>
 #include <cmath>
 
