@@ -80,7 +80,6 @@ main(){
 
 
   cout << " R1 = R1 + R2 "  << endl;
-  ;
   R1.PrintRational();
   R2.PrintRational();
   R1.Addition(R2);

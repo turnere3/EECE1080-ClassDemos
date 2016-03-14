@@ -43,8 +43,6 @@ private:
   void Reduce();
   int Numerator;
   int Denominator;
-
-
 };
 
 Rational::Rational(int num, int den){
@@ -222,8 +220,7 @@ void Rational::PrintRationalFloatingPoint(){
 int gcd (int u, int v){
   int temp;
 
-  while ( v != 0 )
-  {
+  while ( v != 0 ){
     temp = u % v;
     u = v;
     v = temp;
@@ -231,11 +228,8 @@ int gcd (int u, int v){
   return (u);
 }
 
-main(){
+int main(){
   Rational R1(2,4), R2, R3(3,3);
-
-
-
   cout << " R1 = R1 + R2 " ;
   R1.PrintRational();
   R2.PrintRational();
