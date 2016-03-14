@@ -71,12 +71,13 @@ void Rectangle::calculateSurfaceArea(){
 	surface_area = width * length;
 }
 
-Rectangle Rectangle::operator=(const Rectangle&  rhs){
+Rectangle &Rectangle::operator=(const Rectangle&  rhs){
     if (this == &rhs)
 	return *this;
 
     width = rhs.width;
     length = rhs.length;
+    surface_area = rhs.surface_area;
 
     return *this;
 }

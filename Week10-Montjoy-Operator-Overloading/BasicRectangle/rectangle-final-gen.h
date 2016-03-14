@@ -22,7 +22,7 @@ public:
 	double getWidth();
 	double getLength();
 	double getSurfaceArea();
-	Rectangle operator=(const Rectangle& rhs);
+	Rectangle &operator=(const Rectangle& rhs);
 	Rectangle operator+(const Rectangle& rhs);
 	Rectangle operator-(const Rectangle& rhs);
 	Rectangle operator+=(const Rectangle& rhs);
