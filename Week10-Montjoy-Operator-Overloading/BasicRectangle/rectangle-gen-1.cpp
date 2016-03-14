@@ -1,5 +1,4 @@
 
-
 // This demostrates both classes, operator overloading, 
 // and multiple file linking
 
@@ -10,8 +9,7 @@
 
 using namespace std;
 
-class Rectangle
-{
+class Rectangle{
 	public:
 		Rectangle();
 		Rectangle(double in_width, double in_length);
@@ -24,9 +22,7 @@ class Rectangle
 		double length;
 };
 
-
-int main()
-{
+int main(){
 	Rectangle rect1;
 	Rectangle rect2(12.,24.);
 	Rectangle Result;
@@ -48,30 +44,25 @@ int main()
 	return 0;
 }
 
-Rectangle::Rectangle()
-{
+Rectangle::Rectangle(){
 	SetRectangle(0, 0);
 }
 
-Rectangle::Rectangle(double in_width, double in_length)
-{
+Rectangle::Rectangle(double in_width, double in_length){
 	SetRectangle(in_width, in_length);
 }
 
-void Rectangle::SetRectangle(double in_width, double in_length)
-{
+void Rectangle::SetRectangle(double in_width, double in_length){
 	width = in_width;
 	length = in_length;
 }
 
-void Rectangle::GetRectangle(double &out_width, double &out_length)
-{
+void Rectangle::GetRectangle(double &out_width, double &out_length){
 	out_width = width;
 	out_length = length;
 }
 
-void Rectangle::PrintRectangle()
-{
+void Rectangle::PrintRectangle(){
 	cout << "Rectangle Data: " << endl;
 	cout << "\tWidth: " << width << endl;
 	cout << "\tLength: " << length << endl << endl;
