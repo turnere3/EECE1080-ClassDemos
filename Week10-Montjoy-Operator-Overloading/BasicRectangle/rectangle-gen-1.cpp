@@ -1,5 +1,5 @@
 
-// This demostrates both classes, operator overloading, 
+// This demostrates both classes, operator overloading,
 // and multiple file linking
 
 #include <iostream>
@@ -9,72 +9,71 @@
 
 using namespace std;
 
-class Rectangle{
+class Rectangle {
 public:
-	Rectangle();
-	Rectangle(double in_width, double in_length);
-	void SetRectangle(double in_width, double in_length);
-	void GetRectangle(double &out_width, double &out_length);
-	void PrintRectangle(void);
-	double getWidth();
-	double getLength();
-
+  Rectangle();
+  Rectangle(double in_width, double in_length);
+  void SetRectangle(double in_width, double in_length);
+  void GetRectangle(double &out_width, double &out_length);
+  void PrintRectangle(void);
+  double getWidth();
+  double getLength();
 private:
-	double width;
-	double length;
+  double width;
+  double length;
 };
 
 int main(){
-	Rectangle rect1;
-	Rectangle rect2(12.,24.);
-	Rectangle Result;
+  Rectangle rect1;
+  Rectangle rect2(12.,24.);
+  Rectangle Result;
 
-	double width_from_class = 0;
-	double length_from_class = 0;
+  double width_from_class = 0;
+  double length_from_class = 0;
 
-	cout << width_from_class << endl;
-	cout << length_from_class << endl;
+  cout << width_from_class << endl;
+  cout << length_from_class << endl;
 
-	rect2.GetRectangle(width_from_class, length_from_class);
-	cout << width_from_class << endl;
-	cout << length_from_class << endl;
+  rect2.GetRectangle(width_from_class, length_from_class);
+  cout << width_from_class << endl;
+  cout << length_from_class << endl;
 
 
-	rect1.PrintRectangle();
-	rect2.PrintRectangle();
+  rect1.PrintRectangle();
+  rect2.PrintRectangle();
 
-	return 0;
+  return 0;
 }
 
 Rectangle::Rectangle(){
-	SetRectangle(0, 0);
+  SetRectangle(0, 0);
 }
 
 Rectangle::Rectangle(double in_width, double in_length){
-	SetRectangle(in_width, in_length);
+  SetRectangle(in_width, in_length);
 }
 
 void Rectangle::SetRectangle(double in_width, double in_length){
-	width = in_width;
-	length = in_length;
+  width = in_width;
+  length = in_length;
 }
 
-
 double Rectangle::getWidth(){
-	return width;
+  return width;
 }
 
 double Rectangle::getLength(){
-	return width;
+  return length;
 }
 
 void Rectangle::GetRectangle(double &out_width, double &out_length){
-	out_width = width;
-	out_length = length;
+  out_width = width;
+  out_length = length;
 }
 
 void Rectangle::PrintRectangle(){
-	cout << "Rectangle Data: " << endl;
-	cout << "\tWidth: " << width << endl;
-	cout << "\tLength: " << length << endl << endl;
+  cout << "Rectangle Data: " << endl;
+  cout << "\tWidth: " << width << endl;
+  cout << "\tLength: " << length << endl << endl;
 }
+
