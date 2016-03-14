@@ -15,25 +15,24 @@ using namespace std;
 
 class Rectangle
 {
-	public:
-		Rectangle();
-		Rectangle(double in_width, double in_length);
-		void SetRectangle(double in_width, double in_length);
-		void GetRectangle(double &out_width, double &out_length,
-			double &out_surface_area);
-		void PrintRectangle(void);
-		void EnterRectangle(void);
+public:
+	Rectangle();
+	Rectangle(double in_width, double in_length);
+	void SetRectangle(double in_width, double in_length);
+	void GetRectangle(double &out_width, double &out_length,
+		double &out_surface_area);
+	void PrintRectangle(void);
+	void EnterRectangle(void);
 
-	private:
-		void CalculateSurfaceArea();
-		double width;
-		double length;
-		double surface_area;
+private:
+	void CalculateSurfaceArea();
+	double width;
+	double length;
+	double surface_area;
 };
 
 
-int main()
-{
+int main(){
 	Rectangle rect1;
 	Rectangle rect2(12.,24.);
 	Rectangle rect3;
@@ -41,7 +40,6 @@ int main()
 	rect1.EnterRectangle();
 
 	rect1.PrintRectangle();
-	rect1.CalculateSurfaceArea();
 	rect2.PrintRectangle();
 	rect3.PrintRectangle();
 

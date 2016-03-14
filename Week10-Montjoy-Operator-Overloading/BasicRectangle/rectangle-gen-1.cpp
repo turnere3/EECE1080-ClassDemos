@@ -10,16 +10,18 @@
 using namespace std;
 
 class Rectangle{
-	public:
-		Rectangle();
-		Rectangle(double in_width, double in_length);
-		void SetRectangle(double in_width, double in_length);
-		void GetRectangle(double &out_width, double &out_length);
-		void PrintRectangle(void);
+public:
+	Rectangle();
+	Rectangle(double in_width, double in_length);
+	void SetRectangle(double in_width, double in_length);
+	void GetRectangle(double &out_width, double &out_length);
+	void PrintRectangle(void);
+	double getWidth();
+	double getLength();
 
-	private:
-		double width;
-		double length;
+private:
+	double width;
+	double length;
 };
 
 int main(){
@@ -55,6 +57,15 @@ Rectangle::Rectangle(double in_width, double in_length){
 void Rectangle::SetRectangle(double in_width, double in_length){
 	width = in_width;
 	length = in_length;
+}
+
+
+double Rectangle::getWidth(){
+	return width;
+}
+
+double Rectangle::getLength(){
+	return width;
 }
 
 void Rectangle::GetRectangle(double &out_width, double &out_length){

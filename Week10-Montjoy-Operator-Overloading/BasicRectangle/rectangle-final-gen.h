@@ -11,24 +11,27 @@
 using namespace std;
 
 class Rectangle{
-	public:
-		Rectangle();
-		Rectangle(double in_width, double in_length);
-		void SetRectangle(double in_width, double in_length);
-		void GetRectangle(double &out_width, double &out_length,
+public:
+	Rectangle();
+	Rectangle(double in_width, double in_length);
+	void setRectangle(double in_width, double in_length);
+	void getRectangle(double &out_width, double &out_length,
 			double &out_surface_area);
-		void PrintRectangle(void);
-		void EnterRectangle(void);
-		Rectangle operator=(const Rectangle& rhs);
-		Rectangle operator+(const Rectangle& rhs);
-		Rectangle operator-(const Rectangle& rhs);
-		Rectangle operator+=(const Rectangle& rhs);
-		Rectangle operator-=(const Rectangle& rhs);
+	void displayRectangle(void);
+	void enterRectangle(void);
+	double getWidth();
+	double getLength();
+	double getSurfaceArea();
+	Rectangle operator=(const Rectangle& rhs);
+	Rectangle operator+(const Rectangle& rhs);
+	Rectangle operator-(const Rectangle& rhs);
+	Rectangle operator+=(const Rectangle& rhs);
+	Rectangle operator-=(const Rectangle& rhs);
 
-	private:
-		void CalculateSurfaceArea();
-		double width;
-		double length;
-		double surface_area;
+private:
+	void calculateSurfaceArea();
+	double width;
+	double length;
+	double surface_area;
 };
 

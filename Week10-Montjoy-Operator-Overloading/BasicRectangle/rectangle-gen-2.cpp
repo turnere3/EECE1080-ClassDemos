@@ -15,17 +15,17 @@ using namespace std;
 
 class Rectangle
 {
-	public:
-		Rectangle();
-		Rectangle(double in_width, double in_length);
-		void SetRectangle(double in_width, double in_length);
-		void GetRectangle(double &out_width, double &out_length);
-		void PrintRectangle(void);
-		void EnterRectangle(void);
+public:
+	Rectangle();
+	Rectangle(double in_width, double in_length);
+	void SetRectangle(double in_width, double in_length);
+	void GetRectangle(double &out_width, double &out_length);
+	void PrintRectangle(void);
+	void EnterRectangle(void);
 
-	private:
-		double width;
-		double length;
+private:
+	double width;
+	double length;
 };
 
 

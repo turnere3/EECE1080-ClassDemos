@@ -17,34 +17,46 @@ using namespace std;
 #include "rectangle-final-gen.h"
 
 Rectangle::Rectangle() {
-	SetRectangle(0, 0);
+	setRectangle(0, 0);
 }
 
 Rectangle::Rectangle(double in_width, double in_length){
-	SetRectangle(in_width, in_length);
+	setRectangle(in_width, in_length);
 }
 
-void Rectangle::SetRectangle(double in_width, double in_length){
+void Rectangle::setRectangle(double in_width, double in_length){
 	width = in_width;
 	length = in_length;
-	CalculateSurfaceArea();
+	calculateSurfaceArea();
 }
 
-void Rectangle::GetRectangle(double &out_width, double &out_length, 
+void Rectangle::getRectangle(double &out_width, double &out_length, 
 		double &out_surface_area){
 	out_width = width;
 	out_length = length;
 	out_surface_area = surface_area;
 }
 
-void Rectangle::PrintRectangle(){
+double Rectangle::getWidth(){
+	return width;
+}
+
+double Rectangle::getLength(){
+	return length;
+}
+
+double Rectangle::getSurfaceArea(){
+	return surface_area;
+}
+
+void Rectangle::displayRectangle(){
 	cout << "Rectangle Data: " << endl;
 	cout << "\tWidth: " << width << endl;
 	cout << "\tLength: " << length << endl;
 	cout << "\tSurface Area: " << surface_area << endl << endl;
 }
 
-void Rectangle::EnterRectangle(void){
+void Rectangle::enterRectangle(void){
 	double local_width;
 	double local_length;
 
@@ -52,10 +64,10 @@ void Rectangle::EnterRectangle(void){
 	local_width 	= getReal("Width: ");
 	local_length 	= getReal("Length: ");
 
-	SetRectangle(local_width, local_length);
+	setRectangle(local_width, local_length);
 }
 
-void Rectangle::CalculateSurfaceArea(){
+void Rectangle::calculateSurfaceArea(){
 	surface_area = width * length;
 }
 
@@ -63,7 +75,10 @@ Rectangle Rectangle::operator=(const Rectangle&  rhs){
     if (this == &rhs)
 	return *this;
 
-    return Rectangle( rhs.width, rhs.length );
+    width = rhs.width;
+    length = rhs.length;
+
+    return *this;
 }
 
 Rectangle Rectangle::operator+(const Rectangle&  rhs){
