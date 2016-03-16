@@ -88,7 +88,7 @@ int main(){
   cout << " acres: " << a.getAcres();
   cout << " tax: $" << a.getYearTax() << endl;
   
-  return 0;
+
   
   Property b("1 Bearcat Way");
   cout << "b address: " << b.getAddress();
@@ -109,7 +109,7 @@ int main(){
   cout << "b address: " << b.getAddress();
   cout << " acres: " << b.getAcres();
   cout << " tax: $" << b.getYearTax() << endl;
-  return 0;
+ 
   
   Property* e = new Property;
   cout << e->getAddress(); 
