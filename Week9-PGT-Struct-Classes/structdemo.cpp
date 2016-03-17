@@ -15,6 +15,12 @@ struct person_t{
 	string name;
 };
 
+struct career_t{
+	int age;
+	int height;
+	string name;
+};
+
 void printPerson(person_t a){
 	cout << "Name: " << a.name << endl;
 	cout << "Age: " << a.age << endl;
@@ -38,12 +44,16 @@ void addAge3( person_t* a, int incr){
 int main(){
 	int a = 5;
 	person_t bob;
+	career_t sam;
+	
 	
 	
 	person_t bill;   // bill is an instance of the struct
 	bill.name = "Bill";
 	bill.age = 11;
 	bill.height = 55;
+	
+
 	
 	person_t* grace = new person_t;
 	grace->name = "Grace";
@@ -55,9 +65,18 @@ int main(){
 		//addAge2(bob, 20);
 		addAge3(&bob, 20);
 	}
-	
+
+  int array[3]={1,5,6};
+  
 	printPerson(bob);
 	printPerson(bill);
 	printPerson(*grace);
+	cout<<array[1]<<endl;
+	int *b =array;
+	cout<<b<<endl;
+	cout<<&b<<endl;
+	cout<<array;
+	cout<<*(b+1)<<endl;
+
 
 }
