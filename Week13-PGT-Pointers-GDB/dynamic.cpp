@@ -9,7 +9,7 @@ void addOne(int* thing){
 int main(){
   int* bob = new int;
   int* bill = new int;
-  int mary[10];// = new int[10];
+  int* mary = new int[10];
   
   cout << *bob << endl;
   
@@ -18,7 +18,7 @@ int main(){
   
   addOne(bob);
   
-  mary[10000] = 100;
+  //mary[10000] = 100;
   
   cout << *bob << endl;
   

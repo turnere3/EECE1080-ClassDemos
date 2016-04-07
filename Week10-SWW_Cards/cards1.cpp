@@ -29,7 +29,7 @@ class Deck{
 	}
 
 	void Deal(){
-	cout<< "\nHere is your deal \n"<< endl;
+	  cout<< "\nHere is your deal \n"<< endl;
 		for(int i=0;i<=4;i++){
 			cout << "Card " << i << " is the " << deck_of_cards[i].value << " of " << deck_of_cards[i].suite << endl;
 		}
