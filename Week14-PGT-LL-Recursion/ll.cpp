@@ -31,6 +31,33 @@ void print(node_t* node){
   cout << endl;
 }
 
+
+int printCount = 0;
+void printRBad(node_t* node){
+  if(node == NULL){
+    cout << endl;
+    return;
+  }
+  cout << printCount << ": " << node->value << ", ";
+  printCount++;
+  printRBad(node->next);
+}
+
+
+
+void printR2(node_t* node, int count){
+  if(node == NULL){
+    cout << endl;
+    return;
+  }
+  cout << count << ": " << node->value << ", ";
+  printR2(node->next, count + 1);
+}
+
+void printR(node_t* node){
+  printR2(node, 0);
+}
+
 node_t* push_front(node_t* node, int value){ // returns the new head
   node_t* temp = new node_t;
   temp->value = value;
@@ -75,5 +102,7 @@ int main(){
 
   cout << "size: " << sizeR(head) << endl;
   print(head);
+  printR(head);
+  printR(head);
   return 0;
 }
