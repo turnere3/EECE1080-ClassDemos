@@ -18,7 +18,8 @@ class Rational {
     }
     Rational add(const Rational &secondRational){
 	Rational retval;
- 	retval.numerator = (numerator*secondRational.denominator + secondRational.numerator*denominator);
+ 	retval.numerator = (numerator*secondRational.denominator 
+					+ secondRational.numerator*denominator);
  	retval.denominator = (secondRational.denominator*denominator);
 	return retval;
     }
