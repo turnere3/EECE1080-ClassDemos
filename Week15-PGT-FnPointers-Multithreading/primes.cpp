@@ -17,7 +17,7 @@ using namespace std;
 
 // How many threads we want and the max prime number to check!
 const int NUM_THREADS = 1;
-const int MAXPRIME = 10000000;
+const int MAXPRIME = 20;//10000000;
 
 // We can only send a pointer (void*) to a thread, so pack all the
 // information it needs into a struct.
@@ -29,7 +29,9 @@ struct thread_data_t{
 
 // Helper function to say if a number is prime or not.
 bool isPrime(unsigned number){
-  for(unsigned i = 2; i < sqrt(number) + 2; i++){
+  if(number == 2)return true;
+  if(number == 3) return true;
+  for(unsigned i = 2; i < sqrt(number) + 1; i++){
     if( number % i == 0)return false;
   }
   return true;
@@ -53,7 +55,7 @@ void* calcPrimes(void* arg){
   // So we search from start to end
   for(unsigned i = start; i <= end; i++){ 
     if(isPrime(i)){
-      //cout << i << ",";   // Printing takes time, so just count
+      cout << i << ",";   // Printing takes time, so just count
       count++;
     }
   }

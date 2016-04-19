@@ -20,10 +20,10 @@ void print(vector<int> thing){
 // This function accepts a pointer to a function and a vector of
 // integers.  It applies the function to every element and returns
 // the result.
-vector<int> map(int (*fn)(int), vector<int> thing){
+vector<int> map(int (*bob)(int), vector<int> thing){
   vector<int> ret(thing.size());
   for(unsigned i = 0; i < thing.size(); i++){
-    ret[i] = fn( thing[i] );
+    ret[i] = bob( thing[i] );
   }
   return ret;
 }
